@@ -5,8 +5,8 @@
 
 class Coordenada {
 
-    int a {0};
-    int b {0};
+    int x {0};
+    int y {0};
 
     public:
     Coordenada(int punto_x, int punto_y);

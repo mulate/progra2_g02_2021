@@ -5,10 +5,10 @@
 using namespace std;
 
 Coordenada::Coordenada(int punto_x, int punto_y) {
-    a = punto_x;
-    b = punto_y;
+    x = punto_x;
+    y = punto_y;
 }
 
 string Coordenada::ToString() {
-    return "(" + to_string(a) + ", " + to_string(b) + ")";
+    return "(" + to_string(x) + ", " + to_string(y) + ")";
 }

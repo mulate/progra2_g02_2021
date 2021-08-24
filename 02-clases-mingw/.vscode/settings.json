@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.config": "xml",
+        "vector": "cpp"
+    }
+}

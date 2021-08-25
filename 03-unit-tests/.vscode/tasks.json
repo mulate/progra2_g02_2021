@@ -9,9 +9,6 @@
                 "-stdlib=libc++",
                 "-g",
                 "${workspaceFolder}/src/*.cpp",
-                "${workspaceFolder}/test/*.cpp",
-                "-lgtest",
-                "-lpthread",
                 "-o",
                 "${workspaceFolder}/obj/clase02"
             ],

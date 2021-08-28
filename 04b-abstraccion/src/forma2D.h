@@ -4,12 +4,12 @@
 #include <string>
 
 class Forma2D {
-
+    
     protected:
     Forma2D() { }
 
     public:
-    virtual ~Forma2D() {}
+    ~Forma2D() {}
     virtual float CalculoArea() = 0;  
     virtual std::string ObtenerNombre() = 0;  
 };

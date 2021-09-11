@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void addOne(int& ref)
+void addOne(int &ref)
 {
     ref = ref + 1;
 }

@@ -19,8 +19,8 @@ class Fraccion {
     
     Fraccion(const Fraccion &f); //Copia
 
-    float ToFloat();
-    string ToString();
+    float ToFloat() const;
+    string ToString() const;
 
     void operator += (const Fraccion &f); // Suma
     void operator -= (const Fraccion &f); // Resta

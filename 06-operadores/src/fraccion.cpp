@@ -36,10 +36,10 @@ Fraccion::Fraccion(const Fraccion &f) // Constructor de copia
     this->denominador = f.denominador;
 }
 
-float Fraccion::ToFloat() {
+float Fraccion::ToFloat() const {
     return ((float)this->numerador / (float)this->denominador) + (float)this->parteEntera; 
 }
-string Fraccion::ToString() {
+string Fraccion::ToString() const {
     return to_string(this->parteEntera) + "[" + to_string(this->numerador) + "/" + to_string(this->denominador) + "]";
 }
 
@@ -78,14 +78,14 @@ void Fraccion::operator/= (const Fraccion &f) {
 
 }
 
-bool Fraccion::operator== (Fraccion &f) {
+bool Fraccion::operator== (Fraccion &f) const {
     
     //return (this->numerador == f.numerador) && (this->denominador == f.denominador);
     bool resultado = this->ToFloat() == f.ToFloat();
     return resultado;
 }
 
-bool Fraccion::operator== (float &f) {
+bool Fraccion::operator== (float &f) const {
     
     //return (this->numerador == f.numerador) && (this->denominador == f.denominador);
     bool resultado = this->ToFloat() == f;

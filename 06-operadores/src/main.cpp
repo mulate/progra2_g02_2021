@@ -13,7 +13,7 @@ int main() {
     cout << medio.ToString() << endl;
     cout << dos_cuartos.ToFloat() << endl;
 
-    float pruebaFloat = 0.5;
+    float pruebaFloat = 0.5f;
 
     if (medio == pruebaFloat)
     {

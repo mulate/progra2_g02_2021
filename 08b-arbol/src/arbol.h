@@ -11,8 +11,10 @@ class Arbol {
 
     public:
     Arbol(int id, int valor);
+    ~Arbol();
     void AgregarNodo(int id, int valor, int idPadre);
 
+    friend std::ostream& operator << (std::ostream &o, const Arbol &arbol);
 };
 
 

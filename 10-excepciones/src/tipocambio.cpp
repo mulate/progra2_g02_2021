@@ -2,20 +2,19 @@
 #include "calculadora.h"
 #include <string>
 #include <iostream>
+#include "ExcepcionValorEntradaInvalido.h"
 
 TipoCambio::TipoCambio(float compra, float venta)
 {
-    /*if (compra == 0)
+    if (compra == 0)
     {
-        std::string error {"Compra no puede ser 0."};
-        throw error;
+        throw ExcepcionValorEntradaInvalido("Compra no puede ser 0.");
     }
 
     if (venta == 0)
     {
-        std::string error {"Venta no puede ser 0."};
-        throw error;
-    }*/
+        throw ExcepcionValorEntradaInvalido("Venta no puede ser 0.");
+    }
 
     this->cambio_compra = compra;
     this->cambio_venta = venta;

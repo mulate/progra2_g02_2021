@@ -6,6 +6,7 @@
 #include <string>
 #include "tipocambio.h"
 #include "ExcepcionDivideEntreCero.h"
+#include "ExcepcionValorEntradaInvalido.h"
 
 using namespace std;
 
@@ -33,9 +34,16 @@ int main() {
     }
     catch(const ExcepcionDivideEntreCero& excepcion)
     {
-        std::cerr << "Catch en main: " << excepcion.what() << '\n';
+        std::cerr << "Catch en main de la excepción divide entre 0: " << excepcion.what() << '\n';
     }
-
+    catch(const ExcepcionValorEntradaInvalido& excepcion)
+    {
+        std::cerr << "Catch en main de la excepción de entrada inválido en el tipo de cambio: " << excepcion.what() << '\n';
+    }
+    catch(const exception& excepcion)
+    {
+        std::cerr << "Catch en main de la excepción desconocida: " << excepcion.what() << '\n';
+    }
     return 0;
 }
 

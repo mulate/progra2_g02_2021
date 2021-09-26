@@ -2,6 +2,7 @@
 #define NODO_H
 
 #include <vector>
+#include <iostream>
 
 class Nodo {
 

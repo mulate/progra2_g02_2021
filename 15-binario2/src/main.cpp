@@ -42,9 +42,10 @@ int main() {
     Libro libro2LeidoDeArchivo;
     Libro libro3LeidoDeArchivo;
 
-    archivoEntrada.read((char *) &libro1LeidoDeArchivo, sizeof(Libro));
-    archivoEntrada.read((char *) &libro2LeidoDeArchivo, sizeof(Libro));
+    archivoEntrada.seekg(sizeof(Libro) * 2);
     archivoEntrada.read((char *) &libro3LeidoDeArchivo, sizeof(Libro));
+    //archivoEntrada.read((char *) &libro2LeidoDeArchivo, sizeof(Libro));
+    //archivoEntrada.read((char *) &libro3LeidoDeArchivo, sizeof(Libro));
 
     archivoEntrada.close();
 

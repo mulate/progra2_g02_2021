@@ -1,9 +1,13 @@
+#ifndef UNIT_TEST
+
 #include <iostream>
 #include <fstream>
 
 #include "libro.h"
 #include "escritorLibros.h"
+#include "lectorLibros.h"
 #include "string.h"
+#include "./excepciones/excepcionLibroNoExiste.h"
 
 using namespace std;
 
@@ -17,47 +21,20 @@ int main() {
     archivoSalida.AgregarLibro(libro1);
     archivoSalida.Cerrar();
 
-
-    // Ejemplo 1: Escribir archivo
-    ofstream archivoSalida;
-
-    archivoSalida.open("libros.dat", ios::out|ios::binary);
-
-    if (!archivoSalida.is_open())
+    try
     {
-        cerr << "No se pudo abrir archivo libros.dat para escribir los datos";
+        LectorLibros archivoEntrada {"libros.dat"};
+        Libro libro = archivoEntrada.ObtenerLibro(5);
+        archivoEntrada.Cerrar();        
+    }
+    catch(const ExcepcionLibroNoExiste& e)
+    {
+        std::cerr << "Error leyendo el libro solicitado. " << e.what() << '\n';
         return -1;
     }
-
-
-
-    archivoSalida.write((char *) &libro1, sizeof(Libro));
-    archivoSalida.write((char *) &libro2, sizeof(Libro));
-    archivoSalida.write((char *) &libro3, sizeof(Libro));
-
-    archivoSalida.close();
-
-    // Ejemplo 2: Leer archivo
-    ifstream archivoEntrada;
-    archivoEntrada.open("libros.dat", ios::in|ios::binary);
-
-    if (!archivoEntrada.is_open())
-    {
-        cerr << "No se pudo abrir archivo libros.dat para leer los datos";
-        return -1;
-    }
-
-    Libro libro1LeidoDeArchivo;
-    Libro libro2LeidoDeArchivo;
-    Libro libro3LeidoDeArchivo;
-
-    //archivoEntrada.seekg(sizeof(Libro));
-    archivoEntrada.read((char *) &libro1LeidoDeArchivo, sizeof(Libro));
-    archivoEntrada.read((char *) &libro2LeidoDeArchivo, sizeof(Libro));
-    archivoEntrada.read((char *) &libro3LeidoDeArchivo, sizeof(Libro));
-
-    archivoEntrada.close();
 
     return 0;
 
 }
+
+#endif

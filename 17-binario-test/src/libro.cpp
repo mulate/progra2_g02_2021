@@ -16,3 +16,15 @@ Libro::Libro() {
     strcpy(this->nombre, "");
     strcpy(this->isbn, "");
 }
+
+int Libro::getID() {
+    return this->id;
+}
+
+string Libro::getNombre() {
+    return string{this->nombre};
+}
+
+string Libro::getISBN() {
+    return string{this->isbn};
+}

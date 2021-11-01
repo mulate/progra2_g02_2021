@@ -2,16 +2,19 @@
 #define EscritorLibros_H
 
 #include <string>
+#include <fstream>
+#include <iostream>
+
 #include "libro.h"
 
 class EscritorLibros {
 
-    std::string nombreArchivo;
+    ofstream archivoSalida;
 
     public:
     EscritorLibros(std::string nombre);
     
-    void AgregarLibro(Libro libro);
+    void AgregarLibro(Libro &libro);
     void Cerrar();
 
 };

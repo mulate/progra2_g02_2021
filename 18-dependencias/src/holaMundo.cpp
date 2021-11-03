@@ -1,6 +1,6 @@
 #include "holaMundo.h"
 
-HolaMundo::HolaMundo(ProveedorFormatoHolaMundo *proveedor) {
+HolaMundo::HolaMundo(ProveedorFormato *proveedor) {
     this->proveedor = proveedor;
 }
 

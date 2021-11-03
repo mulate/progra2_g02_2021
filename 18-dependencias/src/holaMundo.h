@@ -2,16 +2,16 @@
 #define HOLAMUNDO_H
 
 #include <string>
-#include "proveedorFormatoHolaMundo.h"
+#include "proveedorFormato.h"
 
 using namespace std;
 
 class HolaMundo {
 
-    ProveedorFormatoHolaMundo *proveedor;
+    ProveedorFormato *proveedor;
 
     public:
-    HolaMundo(ProveedorFormatoHolaMundo *proveedor);
+    HolaMundo(ProveedorFormato *proveedor);
 
     string GenerarHolaMundo(string nombre);
 

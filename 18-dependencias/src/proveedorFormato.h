@@ -1,11 +1,11 @@
-#ifndef ProveedorFormatoHolaMundo_H
-#define ProveedorFormatoHolaMundo_H
+#ifndef ProveedorFormato_H
+#define ProveedorFormato_H
 
 #include <string>
 
 using namespace std;
 
-class ProveedorFormatoHolaMundo {
+class ProveedorFormato {
 
 
     public:

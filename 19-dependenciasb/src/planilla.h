@@ -1,16 +1,16 @@
 #ifndef PLANILLA_H
 #define PLANILLA_H
 
-#include "envioCorreos.h"
-#include "tipoCambio.h"
+#include "proveedorEnvioCorreos.h"
+#include "proveedorTipoCambio.h"
 
 class Planilla {
 
-    EnvioCorreos *envioCorreo;
-    TipoCambio *tipoCambio;
+    ProveedorEnvioCorreos *envioCorreo;
+    ProveedorTipoCambio *tipoCambio;
 
     public:
-    Planilla();
+    Planilla(ProveedorEnvioCorreos *proveedorEnvioCorreo, ProveedorTipoCambio *proveedorTipoCambio);
 
 };
 

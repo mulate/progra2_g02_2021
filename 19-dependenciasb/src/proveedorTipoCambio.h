@@ -8,7 +8,7 @@ using namespace std;
 class ProveedorTipoCambio {
 
     public:
-    float ObtenerTipoCambio(string moneda);
+    float ObtenerTipoCambio(string moneda) = 0;
 
 };
 

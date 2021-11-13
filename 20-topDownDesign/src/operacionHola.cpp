@@ -6,7 +6,5 @@ OperacionHola::OperacionHola(ProveedorFormato *proveedorFormato) {
 }
 
 string OperacionHola::Ejecute(string valor) {
-
-    throw "No está implementado";
-
+    return proveedorFormato->ObtenerFormato() + valor;
 }

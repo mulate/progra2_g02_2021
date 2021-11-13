@@ -1,12 +1,12 @@
 #include <gtest/gtest.h>
 #include <string>
 #include <sstream>
-#include "./../src/proveedorFormatoArchivoTexto.h"
+#include "./../src/proveedorFormatoDesdeStream.h"
 
 using namespace std;
 
 namespace {
-    TEST(ProveedorFormatoArchivoTexto_Test, TestObtenerFormato) {
+    TEST(ProveedorFormatoDesdeStream_Test, TestObtenerFormato) {
         /// AAA
 
         // Arrange - configurar el escenario
@@ -14,9 +14,9 @@ namespace {
         std::istringstream stream(esperado); 
 
         // Act - ejecute la operación
-        ProveedorFormatoArchivoTexto *proveedorFormatoArchivoTexto = new ProveedorFormatoArchivoTexto(&stream);
-        string actual = proveedorFormatoArchivoTexto->ObtenerFormato();
-        delete proveedorFormatoArchivoTexto;
+        ProveedorFormatoDesdeStream *proveedorFormatoArchivoStream = new ProveedorFormatoDesdeStream(&stream);
+        string actual = proveedorFormatoArchivoStream->ObtenerFormato();
+        delete proveedorFormatoArchivoStream;
 
         // Assert - valide los resultados
         EXPECT_EQ(esperado, actual);

@@ -9,7 +9,7 @@
 #include <fstream>
 
 #include "proveedorFormato.h"
-#include "proveedorFormatoArchivoTexto.h"
+#include "proveedorFormatoDesdeStream.h"
 
 using namespace std;
 
@@ -28,7 +28,7 @@ int main() {
             return -1;
         }
 
-        ProveedorFormato *proveedorFormato = new ProveedorFormatoArchivoTexto(&ifs);
+        ProveedorFormato *proveedorFormato = new ProveedorFormatoDesdeStream(&ifs);
 
         OperacionHola *operacionHola = new OperacionHola(proveedorFormato);
         operaciones.insert(std::pair<string, Operacion *>("hola", operacionHola));

@@ -8,12 +8,12 @@
 
 using namespace std;
 
-class ProveedorFormatoArchivoTexto : public ProveedorFormato
+class ProveedorFormatoDesdeStream : public ProveedorFormato
 {
     istream *lector;
 
     public:
-    ProveedorFormatoArchivoTexto(istream *lector);
+    ProveedorFormatoDesdeStream(istream *lector);
 
     virtual string ObtenerFormato();
 

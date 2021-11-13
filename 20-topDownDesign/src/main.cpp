@@ -6,16 +6,29 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
+
 #include "proveedorFormato.h"
+#include "proveedorFormatoArchivoTexto.h"
 
 using namespace std;
 
 int main() {
 
     try {
+        // Inicialización
         // Configuración de la inyección de dependencias
         map<string, Operacion *> operaciones {};
-        ProveedorFormato *proveedorFormato = nullptr;
+
+        std::ifstream ifs("formato.ini", std::ifstream::in);
+
+        if (!ifs.is_open())
+        {
+            std::cerr << "Error leyendo archivo formato.ini" << std::endl;
+            return -1;
+        }
+
+        ProveedorFormato *proveedorFormato = new ProveedorFormatoArchivoTexto(&ifs);
 
         OperacionHola *operacionHola = new OperacionHola(proveedorFormato);
         operaciones.insert(std::pair<string, Operacion *>("hola", operacionHola));
@@ -27,6 +40,9 @@ int main() {
         string resultado = procesador->Procese("hola", "todos");
 
         cout << "Resultado: " << resultado << endl;
+
+        // Cerrar archivo de entrada
+        ifs.close();
 
     } catch (char const* exception)
     {

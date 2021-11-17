@@ -5,8 +5,8 @@ Construir un programa que:
     - hola
 
 - Reciba como segundo parámetro, el valor a utilizar en la operación
-    - suma 2+3
-    - hola todos
+    - "suma", "2 + 3"
+    - "hola", "todos"
 
 - La función debe devolver ya sea el resultado aritmético si la operación es 'suma' o 'hola ' más el valor recibido como parámetro.
 

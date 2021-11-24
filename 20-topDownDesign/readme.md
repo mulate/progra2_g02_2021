@@ -28,3 +28,8 @@ Ejemplo: ejemplo20.exe hola todos
 6 - Si no satisface todos los requerimientos o falla, volver al paso 1
 
 Estado del ejemplo: Implementando IdentificadorOperaciones_Test
+
+------
+
+Para ejecutar, agregue un archivo "formato.ini" en la carpeta donde tiene el ejecutable (por ejemplo: /obj).
+El formato.ini debe de tener el formato para el método `hola`.

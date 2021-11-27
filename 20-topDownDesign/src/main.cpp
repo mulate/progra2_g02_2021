@@ -34,7 +34,7 @@ int main() {
         operaciones.insert(std::pair<string, Operacion *>("hola", operacionHola));
 
         IdentificadorOperacionesBase *identificadorOperaciones = new IdentificadorOperaciones(operaciones);
-
+        // Fin de inicialización 
         
         ProcesadorInstrucciones *procesador = new ProcesadorInstrucciones(identificadorOperaciones);
         string resultado = procesador->Procese("hola", "todos");

@@ -10,7 +10,7 @@ LectorLibros::LectorLibros(string nombreArchivo) {
 
     if (!archivoEntrada.is_open())
     {
-        throw new ExcepcionNoSePuedeAbrirArchivo();
+        throw ExcepcionNoSePuedeAbrirArchivo();
     }
 
 }
